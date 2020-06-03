@@ -15,5 +15,6 @@ def format_rule(row):
 		f"({antecedents}) -> ({consequents})\n"
 		f"Support: {round(support, 2)}\n"
 		f"Confidence: {round(confidence, 2)}\n"
-		f"Lift: {round(lift, 2)}\n\n"
+		f"Lift: {round(lift, 2)}\n"
+		f"Antecedents count: {len(row['antecedents'])}\n\n"
 	)
