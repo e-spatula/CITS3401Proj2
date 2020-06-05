@@ -5,6 +5,14 @@ losses as described in the notebook.
 
 
 def discretise_hours(hours):
+    """Returns string representations of the bins a particular number of hours
+    should be represented as.
+
+    Arguments:
+        hours: number of hours as an integer
+    Returns:
+        string representing the bin the hours figure should be placed into
+    """
     if hours < 10:
         return "0-9"
     elif hours < 20:
@@ -28,6 +36,14 @@ def discretise_hours(hours):
 
 
 def discretise_age(age):
+    """Returns string representations of the bins a particular age
+    should be represented as.
+
+    Arguments:
+        age: age as an integer
+    Returns:
+        string representing the bin the age figure should be placed into
+    """
     if age < 10:
         return "0-9"
     elif age < 20:
@@ -51,6 +67,14 @@ def discretise_age(age):
 
 
 def discretise_cap_gains(gains):
+    """Returns string representations of the bins a particular capital gains
+    figure should be represented as.
+
+    Arguments:
+        gains: capital gains as an integer
+    Returns:
+        string representing the bin the capital gains figure should be placed into
+    """
     if gains < 10000:
         return "0-9K"
     elif gains < 20000:
@@ -74,6 +98,14 @@ def discretise_cap_gains(gains):
 
 
 def discretise_cap_loss(loss):
+    """Returns string representations of the bins a particular capital loss
+    figure should be represented as.
+
+    Arguments:
+        loss: capital gains as an integer
+    Returns:
+        string representing the bin the capital loss figure should be placed into
+    """
     if loss < 1000:
         return "0-1K"
     elif loss < 2000:

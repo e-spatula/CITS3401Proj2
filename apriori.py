@@ -1,11 +1,28 @@
+"""Utility functions used for printing apriori pruning rules
+"""
 import pandas as pd
 
 
 def print_rules(df):
+	"""Prints every rule in a dataframe of association mining rules
+	
+	Arguments:
+		df: dataframe containing association mining rules
+	Returns:
+		None
+	"""
 	df.apply(lambda x: print(format_rule(x)), axis=1)
 	
 
 def format_rule(row):
+	"""Formats and prints an individual association rule
+
+	Arguments:
+		row: series representing a row in a dataframe of association rules
+
+	Returns:
+		None
+	"""
 	antecedents = ",".join(row["antecedents"])
 	consequents = ",".join(row["consequents"])
 	support = row["support"]
